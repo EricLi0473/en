@@ -1,0 +1,24 @@
+Usage examples:
+----------------
+✅ 常用命令用例全集（新版 dictation.py 支持错题本）
+📘 1. 全默写指定 List（例：List 1, 5, 7）
+python dictation.py --excel 英文单词.xlsx generate --mode full --lists 1,5,7
+
+🎲 2. 抽查模式（例：从 List 2, 3 随机抽取 30 个）
+python dictation.py --excel 英文单词.xlsx generate --mode sample --lists 2,3 --count 30
+
+📘 3. 加入错题本内容一起输出（例：List 1 + 错题本）
+python dictation.py --excel 英文单词.xlsx generate --mode full --lists 1 --include-wb
+
+✍️ 4. 添加错题本条目（交互式输入 10-1、2-5 等）
+python dictation.py --excel 英文单词.xlsx wb add
+
+❌ 5. 从错题本中删除条目
+python dictation.py --excel 英文单词.xlsx wb remove
+
+🧾 6. 单独输出错题本为 PDF（题目 + 答案）
+python dictation.py --excel 英文单词.xlsx wb output
+
+🌱 7. 设置随机种子（可复现的抽样）
+python dictation.py --excel 英文单词.xlsx generate --mode sample --lists 1,2,3 --count 20 --seed 42
+"""
